@@ -4,10 +4,16 @@ import (
 	"github.com/uolter/tris/rules"
 	"fmt"
 	"math/rand"
+	"time"
 	)
 
 var p = fmt.Print
 var pln = fmt.Println
+
+func randInt(min int, max int) int {
+    rand.Seed(time.Now().UTC().UnixNano())
+    return min + rand.Intn(max-min)
+}
 
 func main() {
 
@@ -22,7 +28,7 @@ func main() {
 	for i:=0; i<9; i++ {
 		
 		freeCells = t.GetFreeCells()
-		cell = freeCells[rand.Intn(len(freeCells))]
+		cell = freeCells[randInt(0, len(freeCells))]
 
 		t.Add(cell.Row, cell.Col, 1)
 		t.Show()
