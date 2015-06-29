@@ -25,9 +25,10 @@ func main() {
 	var freeCells []rules.Cell 
 	var cell rules.Cell
 
+	freeCells = t.GetFreeCells()
+
 	for i:=0; i<9; i++ {
 		
-		freeCells = t.GetFreeCells()
 		cell = freeCells[randInt(0, len(freeCells))]
 
 		t.Add(cell.Row, cell.Col, 1)
@@ -39,6 +40,13 @@ func main() {
 			pln("Go is the winner :-(")
 			break
 		}
+
+		freeCells = t.GetFreeCells()
+		if len(freeCells) == 0 {
+			pln("No more shoot allowed.")
+			break
+		}
+
 		for {
 			p("Row [0,1,2] ")
 			fmt.Scanln(&cell.Row)
@@ -52,6 +60,13 @@ func main() {
 
 		if win == true {
 			pln("You win!!")
+			break
+		}
+
+		freeCells = t.GetFreeCells()
+
+		if len(freeCells) == 0 {
+			pln("No more shoot allowed.")
 			break
 		}
 	}
