@@ -1,7 +1,7 @@
 ## tris
 
 
-&nbsp;&nbsp;0 1 2<br/>
+&nbsp;&nbsp;&nbsp;0 1 2<br/>
 0 0&nbsp;X&nbsp;=<br/>
 1 0&nbsp;=&nbsp;X<br/>
 2 X&nbsp;X&nbsp;=<br/>
@@ -17,7 +17,7 @@ If you want to build the code run:
 >> ./tris
 ```
 
-### Running the usnit tests
+### Running the unit tests
 
 ```
 >>  go test -v ./...
