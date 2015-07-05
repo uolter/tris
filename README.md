@@ -1,10 +1,10 @@
 ## tris
 
 
-   0 1 2<br/>
-0 0X=<br/>
-1 0=X<br/>
-2 XX=<br/>
+&nbsp;&nbsp;0 1 2<br/>
+0 0&nbsp;X&nbsp;=<br/>
+1 0&nbsp;=&nbsp;X<br/>
+2 X&nbsp;X&nbsp;=<br/>
 Command line tris game, developed with Go Language. .
 
 After git clone just run go run main.go
