@@ -1,18 +1,18 @@
 package main
 
 import (
-	"github.com/uolter/tris/rules"
 	"fmt"
+	"github.com/uolter/tris/rules"
 	"math/rand"
 	"time"
-	)
+)
 
 var p = fmt.Print
 var pln = fmt.Println
 
 func randInt(min int, max int) int {
-    rand.Seed(time.Now().UTC().UnixNano())
-    return min + rand.Intn(max-min)
+	rand.Seed(time.Now().UTC().UnixNano())
+	return min + rand.Intn(max-min)
 }
 
 func main() {
@@ -22,13 +22,13 @@ func main() {
 	pln("X: Go")
 	t := new(rules.Table)
 
-	var freeCells []rules.Cell 
+	var freeCells []rules.Cell
 	var cell rules.Cell
 
 	freeCells = t.GetFreeCells()
 
-	for i:=0; i<9; i++ {
-		
+	for i := 0; i < 9; i++ {
+
 		cell = freeCells[randInt(0, len(freeCells))]
 
 		t.Add(cell.Row, cell.Col, 1)
